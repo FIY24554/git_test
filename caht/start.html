@@ -1,0 +1,61 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="タイピング.js"></script>
+	<link rel="stylesheet" href="タイピング.css">
+	<script src="DB_sql.js"></script>
+<!--
+	<link rel="stylesheet" href="テトリス/テトリスレイアウト.css"></script>
+
+	<script src="テトリス/テトリスdel.js"></script>
+	<script src="テトリス/テトリスbom.js"></script>
+	<script src="テトリス/テトリス gameset.js"></script>
+
+-->
+</head>
+<body>
+	<div id="screen">
+		<!--タイトル画面-->
+		<div id="title">
+			<div id="title_text">〇✖ゲーム</div>
+			<button></button>
+		</div>
+		<!--ゲーム画面-->
+		<div id="game">
+			<div id="game_screen" >
+			
+			</div>
+		</div>
+		<!--ゲームセット画面-->
+		<div id="game_set">
+			<div id="game_set_text">GAME　SET</div>
+			<div id="high_score"></div>
+			<div id="score"></div>
+		</div>
+	</div>
+	<!--キーボード入力用-->
+	<input type="text" id="input"/>
+</body>
+<script>
+	$("#game").hide();
+	$("#game_set").hide();
+	let title_flash = false;
+	DB.sql()
+	
+	<!--ゲームの画面のFLASH-->
+	title = setInterval(function(){
+		if(title_flash == false){
+			$("#start_text").hide();
+			title_flash = true;
+		} else {
+			$("#start_text").show();
+			title_flash = false;
+		}
+	},500)
+	$().on("click",function(){
+				$("#game").show();
+				$("#title").hide();
+	})
+</script>
+</html>

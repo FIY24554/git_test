@@ -1,0 +1,406 @@
+#screen{
+	width: 640px;
+	height: 480px;
+	background-color: black;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	color: white;
+}
+#title_text{
+	position: absolute;
+	top: 150;
+	left: 140;
+	font-size: 60px;
+}
+#start_text{
+	position: absolute;
+	top: 250;
+	left: 260;
+	font-size: 30px;
+}
+#input{
+	opacity: 0;
+}
+.game_box{
+	border-bottom: 1px solid blue;
+	border-right: 1px solid blue;
+	height: 18px;
+	width: 17px;
+}
+.tl_O{
+	width: 20px;
+	height: 20px;
+	box-shadow: 40px 0px 0px 0px yellow,
+				40px 0px 0px 1px black,
+				60px 0px 0px 0px yellow,
+				60px 0px 0px 1px black,
+				40px 20px 0px 0px yellow,
+				40px 20px 0px 1px black,
+				60px 20px 0px 0px yellow,
+				60px 20px 0px 1px black;
+	position: absolute;
+	top: 40px;
+}
+.tl_I{
+	width: 20px;
+	height: 20px;
+	box-shadow: 40px 0px 0px 0px teal,
+				40px 0px 0px 1px black,
+				40px 20px 0px 0px teal,
+				40px 20px 0px 1px black,
+				40px 40px 0px 0px teal,
+				40px 40px 0px 1px black,
+				40px 60px 0px 0px teal,
+				40px 60px 0px 1px black;
+	position: absolute;
+	top: 20px;
+	left: 10px;
+}
+.tl_L{
+	width: 20px;
+	height: 20px;
+	box-shadow: 40px 0px 0px 0px #FF9900,
+				40px 0px 0px 1px black,
+				40px 20px 0px 0px #FF9900,
+				40px 20px 0px 1px black,
+				40px 40px 0px 0px #FF9900,
+				40px 40px 0px 1px black,
+				60px 40px 0px 0px #FF9900,
+				60px 40px 0px 1px black;
+	position: absolute;
+	top: 30px;
+}
+
+.tl_J{
+	width: 20px;
+	height: 20px;
+	box-shadow: 60px 0px 0px 0px blue,
+				60px 0px 0px 1px black,
+				60px 20px 0px 0px blue,
+				60px 20px 0px 1px black,
+				60px 40px 0px 0px blue,
+				60px 40px 0px 1px black,
+				40px 40px 0px 0px blue,
+				40px 40px 0px 1px black;
+	position: absolute;
+	top: 30px;
+}
+.tl_S{
+	width: 20px;
+	height: 20px;
+	box-shadow: 80px 0px 0px 0px red,
+				80px 0px 0px 1px black,
+				60px 0px 0px 0px red,
+				60px 0px 0px 1px black,
+				60px 20px 0px 0px red,
+				60px 20px 0px 1px black,
+				40px 20px 0px 0px red,
+				40px 20px 0px 1px black;
+	position: absolute;
+	top: 40px;
+	left: -10px;
+}
+.tl_Z{
+	width: 20px;
+	height: 20px;
+	box-shadow: 80px 20px 0px 0px green,
+				80px 20px 0px 1px black,
+				60px 20px 0px 0px green,
+				60px 20px 0px 1px black,
+				60px 0px 0px 0px green,
+				60px 0px 0px 1px black,
+				40px 0px 0px 0px green,
+				40px 0px 0px 1px black;
+	position: absolute;
+	top: 40px;
+	left: -10px;
+}
+.tl_T{
+	width: 20px;
+	height: 20px;
+	box-shadow: 40px 0px 0px 0px purple,
+				40px 0px 0px 1px black,
+				60px 20px 0px 0px purple,
+				60px 20px 0px 1px black,
+				60px 0px 0px 0px purple,
+				60px 0px 0px 1px black,
+				80px 0px 0px 0px purple,
+				80px 0px 0px 1px black;
+	position: absolute;
+	top: 40px;
+	left: -10px;
+}
+#game_genre{
+	width: 120px;
+	height: 120px;
+	background-color: black;
+	position: absolute;
+	top: 60px;
+	left: 460px;
+	border: 1px solid #3366FF;
+}
+#game_save{
+	width: 120px;
+	height: 120px;
+	background-color: black;
+	position: absolute;
+	top: 60px;
+	left: 80px;
+	border: 1px solid #3366FF;
+}
+#game_level{
+	width: 120px;
+	height: 25px;
+	background-color: black;
+	position: absolute;
+	top: 370px;
+	left: 80px;
+	border: 1px solid #3366FF;
+	font-size: 20px;
+	
+}
+#game_score{
+	width: 120px;
+	height: 25px;
+	background-color: black;
+	position: absolute;
+	top: 320px;
+	left: 80px;
+	border: 1px solid #3366FF;
+	font-size: 20px;
+	
+}
+#game_check{
+	width: 202px;
+	height: 39px;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 219;
+	z-index: 100;
+}
+#game_check2{
+	width: 202px;
+	height: 41px;
+	background-color: white;
+	position: absolute;
+	top: -41;
+	left: 219;
+	z-index: 100;
+}
+#game_set_text{
+	position: absolute;
+	top: 150;
+	left: 160;
+	font-size: 60px;
+
+}
+#high_score{
+	position: absolute;
+	top: 250;
+	left: 200;
+	font-size: 30px;
+
+}
+#score{
+	position: absolute;
+	top: 300;
+	left: 200;
+	font-size: 30px;
+
+}
+#game_screen_blind{
+	width: 37px;
+	height: 450px;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 203;
+	z-index: 100;
+}
+.tl_O2{
+	width: 20px;
+	height: 20px;
+	box-shadow: 40px 0px 0px 0px yellow,
+				40px 0px 0px 1px black,
+				60px 0px 0px 0px yellow,
+				60px 0px 0px 1px black,
+				40px 20px 0px 0px yellow,
+				40px 20px 0px 1px black,
+				60px 20px 0px 0px yellow,
+				60px 20px 0px 1px black;
+	position: absolute;
+	top: 40px;
+}
+.tl_I2{
+	width: 20px;
+	height: 20px;
+	box-shadow: 40px 0px 0px 0px teal,
+				40px 0px 0px 1px black,
+				40px 20px 0px 0px teal,
+				40px 20px 0px 1px black,
+				40px 40px 0px 0px teal,
+				40px 40px 0px 1px black,
+				40px 60px 0px 0px teal,
+				40px 60px 0px 1px black;
+	position: absolute;
+	top: 20px;
+	left: 10px;
+}
+.tl_L2{
+	width: 20px;
+	height: 20px;
+	box-shadow: 40px 0px 0px 0px #FF9900,
+				40px 0px 0px 1px black,
+				40px 20px 0px 0px #FF9900,
+				40px 20px 0px 1px black,
+				40px 40px 0px 0px #FF9900,
+				40px 40px 0px 1px black,
+				60px 40px 0px 0px #FF9900,
+				60px 40px 0px 1px black;
+	position: absolute;
+	top: 30px;
+}
+
+.tl_J2{
+	width: 20px;
+	height: 20px;
+	box-shadow: 60px 0px 0px 0px blue,
+				60px 0px 0px 1px black,
+				60px 20px 0px 0px blue,
+				60px 20px 0px 1px black,
+				60px 40px 0px 0px blue,
+				60px 40px 0px 1px black,
+				40px 40px 0px 0px blue,
+				40px 40px 0px 1px black;
+	position: absolute;
+	top: 30px;
+}
+.tl_S2{
+	width: 20px;
+	height: 20px;
+	box-shadow: 80px 0px 0px 0px red,
+				80px 0px 0px 1px black,
+				60px 0px 0px 0px red,
+				60px 0px 0px 1px black,
+				60px 20px 0px 0px red,
+				60px 20px 0px 1px black,
+				40px 20px 0px 0px red,
+				40px 20px 0px 1px black;
+	position: absolute;
+	top: 40px;
+	left: -10px;
+}
+.tl_Z2{
+	width: 20px;
+	height: 20px;
+	box-shadow: 80px 20px 0px 0px green,
+				80px 20px 0px 1px black,
+				60px 20px 0px 0px green,
+				60px 20px 0px 1px black,
+				60px 0px 0px 0px green,
+				60px 0px 0px 1px black,
+				40px 0px 0px 0px green,
+				40px 0px 0px 1px black;
+	position: absolute;
+	top: 40px;
+	left: -10px;
+}
+.tl_T2{
+	width: 20px;
+	height: 20px;
+	box-shadow: 40px 0px 0px 0px purple,
+				40px 0px 0px 1px black,
+				60px 20px 0px 0px purple,
+				60px 20px 0px 1px black,
+				60px 0px 0px 0px purple,
+				60px 0px 0px 1px black,
+				80px 0px 0px 0px purple,
+				80px 0px 0px 1px black;
+	position: absolute;
+	top: 40px;
+	left: -10px;
+}
+#key1{
+	width: 300px;
+	height: 25px;
+	position: absolute;
+	top: 100;
+	left: 30;
+	border: 1px solid black;
+	font-size: 20px;
+}
+#key2{
+	width: 300px;
+	height: 25px;
+	position: absolute;
+	top: 125;
+	left: 30;
+	border: 1px solid black;
+	font-size: 20px;
+}
+#key3{
+	width: 300px;
+	height: 25px;
+	position: absolute;
+	top: 150;
+	left: 30;
+	border: 1px solid black;
+	font-size: 20px;
+}
+#key4{
+	width: 300px;
+	height: 25px;
+	position: absolute;
+	top: 175;
+	left: 30;
+	border: 1px solid black;
+	font-size: 20px;
+}
+#key5{
+	width: 300px;
+	height: 25px;
+	position: absolute;
+	top: 200;
+	left: 30;
+	border: 1px solid black;
+	font-size: 20px;
+}
+#key6{
+	width: 300px;
+	height: 25px;
+	position: absolute;
+	top: 225;
+	left: 30;
+	border: 1px solid black;
+	font-size: 20px;
+}
+#key7{
+	width: 300px;
+	height: 25px;
+	position: absolute;
+	top: 250;
+	left: 30;
+	border: 1px solid black;
+	font-size: 20px;
+}
+#key8{
+	width: 300px;
+	height: 25px;
+	position: absolute;
+	top: 275;
+	left: 30;
+	border: 1px solid black;
+	font-size: 20px;
+}
+
+/*ここから*/
+#planter{
+	width:400;
+	height:200;
+	position: absolute;
+	bottom: 10;
+	right: 120
+}
