@@ -1,0 +1,59 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="DB_sql.js"></script>
+<!--
+	<link rel="stylesheet" href="テトリス/テトリスレイアウト.css"></script>
+
+	<script src="テトリス/テトリスdel.js"></script>
+	<script src="テトリス/テトリスbom.js"></script>
+	<script src="テトリス/テトリス gameset.js"></script>
+
+-->
+</head>
+<body>
+	<div>
+		<button>◀</button>
+		<label id="rece_user"></label>
+	</div>
+	<div id="chat"></div>
+	<div id="msg_box"></div>
+	<!-- キーボード入力値を取得する用 -->
+	<input type="text" id="input"/>
+</body>
+<script>
+//	let rece_user = localStorage.getItem("rece_user");
+//	let send_user = localStorage.getItem("send_user");
+
+	//テスト用
+	let rece_user = "test2";
+	let send_user = "test"
+	let time = new Date();
+	
+	$("#rece_user").text(rece_user);
+	
+	// キーボードのみで操作する
+	$("#input").focus();
+	$("#input").focusout(function () {
+		$("#input").focus();
+	});
+//	let msg_count = DB.sql("select messeage from ");
+	let msg_count = 0;
+	setInterval(function(){
+		let msg_text = $("#input").val();
+		$("#msg_box").text(msg_text);
+		
+	},500);
+	
+	$("#input").keydown(function (e) {
+		if(e.keyCode == 13){
+			let msg_text = $("#msg_box").text();
+			$("#input").val("");
+			DB.sql('insert into message value ("'+send_user+'","'+rece_user+'","'+time+'","'+msg_text+'");')
+		}
+	});
+	
+</script>
+</html>
